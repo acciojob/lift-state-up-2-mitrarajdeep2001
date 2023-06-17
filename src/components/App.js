@@ -1,11 +1,14 @@
 
-import React from "react";
+import React, {useState} from "react";
 import './../styles/App.css';
+import ChildComponent from "./ChildComponent";
 
 const App = () => {
+  const [inputValue, setInputValue] = useState('')
   return (
-    <div>
-        {/* Do not remove the main div */}
+    <div className="parent">
+        <p>{inputValue}</p>
+        <ChildComponent setStateVariable={setInputValue}/>
     </div>
   )
 }
